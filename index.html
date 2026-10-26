@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="DriveCover motor microinsurance prototype — AI-assisted risk assessment and digital claims." />
+  <title>DriveCover — Smart Motor Protection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="DriveCover home">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 27 7v8.1c0 6.5-4.5 11-11 14.1C10.5 26.1 5 21.6 5 15.1V7Z"/><path d="M8.5 20.8c4.4-1 8.4-4.8 10.2-11.5 3.5 4.4 3.9 9.1 1.1 13.4"/><path d="M9.3 23.4c4.6-3.2 8.6-4.3 13.4-3.8"/><path d="M10 17.8 14.4 16"/></svg></span>
+        <span><strong>DriveCover</strong><small>SMART MOTOR PROTECTION</small></span>
+      </a>
+      <div class="sidebar-label" data-i18n="workspace">WORKSPACE</div>
+      <nav class="side-nav" id="mainNav">
+        <button class="nav-link active" data-page="home"><span class="nav-icon">⌂</span><span data-i18n="overview">Overview</span></button>
+        <button class="nav-link" data-page="vehicles"><span class="nav-icon">◈</span><span data-i18n="vehicles">My vehicles</span></button>
+        <button class="nav-link" data-page="plans"><span class="nav-icon">◇</span><span data-i18n="plans">Insurance plans</span></button>
+        <button class="nav-link" data-page="claims"><span class="nav-icon">▤</span><span data-i18n="claims">Claims</span><span class="nav-count" id="claimCount">1</span></button>
+        <button class="nav-link" data-page="assistant"><span class="nav-icon">✳</span><span data-i18n="assistant">AI assistant</span></button>
+        <div class="nav-divider"></div>
+        <div class="sidebar-label" data-i18n="manage">MANAGE</div>
+        <button class="nav-link" data-page="ledger"><span class="nav-icon">▦</span><span data-i18n="ledger">Claim ledger</span></button>
+        <button class="nav-link admin-only" data-page="admin" hidden><span class="nav-icon">▧</span><span data-i18n="admin">Admin console</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="demo-note"><span class="pulse-dot"></span><div><strong data-i18n="demoMode">Demo environment</strong><small data-i18n="demoNote">Sample data · No real payments</small></div></div>
+        <button class="nav-link" id="resetDemoBtn"><span class="nav-icon">↻</span><span data-i18n="resetDemo">Reset demo data</span></button>
+        <div class="profile-mini">
+          <div class="avatar" id="profileAvatar">AS</div><div class="profile-copy"><strong id="profileName">Aman Sharma</strong><small id="profileRole">Customer account</small></div>
+          <button class="icon-btn" id="roleSwitch" title="Switch demo role" aria-label="Switch demo role">⇄</button>
+        </div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb"><span data-i18n="workspace">WORKSPACE</span><span class="crumb-slash">/</span><strong id="pageTitle">Overview</strong></div>
+        <div class="top-actions">
+          <span class="env-pill"><span></span><span data-i18n="prototype">PROTOTYPE</span></span>
+          <button class="language-toggle" id="languageToggle" aria-label="Switch language">हिंदी</button>
+          <button class="icon-btn notification-btn" id="notificationBtn" aria-label="Notifications">♧<i></i></button>
+        </div>
+      </header>
+      <div class="content" id="pageContent">
+        <section class="welcome-row">
+          <div><p class="eyebrow" data-i18n="personalWorkspace">PERSONAL WORKSPACE</p><h1><span data-i18n="welcomeBack">Welcome back,</span> <span id="welcomeName">Aman</span><span class="wave">✦</span></h1><p class="muted" data-i18n="welcomeSubtitle">Here’s your motor protection at a glance.</p></div>
+          <button class="btn btn-primary" data-action="new-quote"><span>＋</span><span data-i18n="getQuote">Get a quote</span></button>
+        </section>
+        <section class="hero-card">
+          <div class="hero-copy"><div class="hero-kicker"><span class="tiny-shield">◆</span><span data-i18n="protectionOverview">PROTECTION OVERVIEW</span></div><h2 data-i18n="heroTitle">Confidence for every<br>road ahead.</h2><p data-i18n="heroText">Simple motor protection, clearer claims, and support when you need it.</p><button class="btn btn-light" data-action="view-policy"><span data-i18n="viewPolicy">View my policy</span><span>↗</span></button></div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-glow"></div><svg class="bike-art" viewBox="0 0 440 250"><defs><linearGradient id="bikePaint" x1="0" x2="1"><stop stop-color="#8dc7ff"/><stop offset="1" stop-color="#3979e7"/></linearGradient></defs><circle cx="106" cy="182" r="45" fill="#0a1427" stroke="#91b5e9" stroke-width="7"/><circle cx="106" cy="182" r="25" fill="none" stroke="#37557d" stroke-width="3"/><circle cx="331" cy="182" r="45" fill="#0a1427" stroke="#91b5e9" stroke-width="7"/><circle cx="331" cy="182" r="25" fill="none" stroke="#37557d" stroke-width="3"/><path d="M106 182 164 118 223 182 157 182 190 131 265 130 331 182" fill="none" stroke="#6da9f7" stroke-width="8" stroke-linejoin="round"/><path d="M164 118 143 101 111 102M265 130 288 93 320 94" fill="none" stroke="#c4e1ff" stroke-width="8" stroke-linecap="round"/><path d="M170 116 Q193 92 222 108 L251 130 223 151 179 147Z" fill="url(#bikePaint)"/><path d="M194 102 210 76 253 77 277 95 263 107 222 108Z" fill="#407ee0"/><path d="M214 76 226 61 257 63 272 79" fill="none" stroke="#c4e1ff" stroke-width="6" stroke-linecap="round"/><path d="M281 94 307 90 323 101" fill="none" stroke="#d8ebff" stroke-width="7" stroke-linecap="round"/><path d="M172 116 150 140 181 147" fill="#2d66bf"/><path d="M225 182 246 153 267 182" fill="none" stroke="#6da9f7" stroke-width="6"/><path d="M89 128 110 113 130 128" fill="none" stroke="#7db5ff" stroke-width="4" opacity=".7"/></svg><div class="art-tag"><span class="art-tag-icon">✦</span><span><strong>Smart protection</strong><small>Built around your journey</small></span></div></div>
+          <div class="hero-decoration"></div>
+        </section>
+        <section class="metric-grid">
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon blue">◇</span><span class="metric-trend">DEMO</span></div><p data-i18n="activePolicies">Active policies</p><div class="metric-value" id="metricPolicies">01</div><small data-i18n="activeCoverage">Your current coverage</small></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon violet">▤</span><span class="metric-trend neutral" id="metricClaimBadge">TRACKING</span></div><p data-i18n="openClaims">Open claims</p><div class="metric-value" id="metricClaims">01</div><small data-i18n="claimUpdates">Status and claim updates</small></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon green">✓</span><span class="metric-trend positive">READY</span></div><p data-i18n="riskAssessment">Risk assessment</p><div class="metric-value metric-word" id="metricRisk">Medium</div><small data-i18n="riskEstimate">Illustrative risk estimate</small></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon amber">↗</span><span class="metric-trend neutral">DEMO</span></div><p data-i18n="annualPremium">Annual premium</p><div class="metric-value" id="metricPremium">₹3,200</div><small data-i18n="illustrativeQuote">Illustrative policy premium</small></article>
+        </section>
+        <section class="dashboard-grid">
+          <article class="panel policy-panel"><div class="panel-heading"><div><p class="eyebrow" data-i18n="yourCoverage">YOUR COVERAGE</p><h3 data-i18n="policySnapshot">Policy snapshot</h3></div><button class="text-btn" data-action="view-policy" data-i18n="viewDetails">View details ↗</button></div><div id="policySnapshot"></div></article>
+          <article class="panel quick-panel"><div class="panel-heading"><div><p class="eyebrow" data-i18n="SHORTCUTS">SHORTCUTS</p><h3 data-i18n="quickActions">Quick actions</h3></div><span class="panel-more">•••</span></div><div class="quick-actions"><button class="quick-action" data-page="vehicles"><span class="quick-icon qi-blue">＋</span><span><strong data-i18n="addVehicle">Add a vehicle</strong><small data-i18n="addVehicleSub">Manage your two-wheeler</small></span><b>›</b></button><button class="quick-action" data-action="new-quote"><span class="quick-icon qi-violet">◇</span><span><strong data-i18n="comparePlans">Compare plans</strong><small data-i18n="comparePlansSub">Find a suitable cover</small></span><b>›</b></button><button class="quick-action" data-page="claims"><span class="quick-icon qi-amber">▤</span><span><strong data-i18n="fileClaim">File a claim</strong><small data-i18n="fileClaimSub">Report an incident</small></span><b>›</b></button><button class="quick-action" data-page="assistant"><span class="quick-icon qi-green">✳</span><span><strong data-i18n="askAssistant">Ask the assistant</strong><small data-i18n="askAssistantSub">Get help with your policy</small></span><b>›</b></button></div></article>
+        </section>
+        <section class="panel activity-panel"><div class="panel-heading"><div><p class="eyebrow" data-i18n="RECENT_ACTIVITY">RECENT ACTIVITY</p><h3 data-i18n="recentClaims">Recent claims & updates</h3></div><button class="text-btn" data-page="claims" data-i18n="viewAll">View all →</button></div><div class="table-wrap"><table><thead><tr><th data-i18n="claimId">CLAIM ID</th><th data-i18n="incident">INCIDENT</th><th data-i18n="date">DATE</th><th data-i18n="status">STATUS</th><th></th></tr></thead><tbody id="recentClaimsBody"></tbody></table></div></section>
+        <footer class="footer"><span>© 2026 DriveCover · Academic prototype</span><span data-i18n="footerDisclaimer">Illustrative demo only · Not an insurance offer</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><p class="eyebrow">DRIVECOVER</p><h2 id="modalTitle">Modal title</h2></div><button class="icon-btn" id="closeModal" aria-label="Close">×</button></div><div id="modalBody"></div></div></div>
+  <script src="/app.js"></script>
+</body>
+</html>
